@@ -107,7 +107,10 @@ function evaluarNota(nota) {
  */
 function mayorDeTres(a, b, c) {
   // TODO: Encuentra y retorna el mayor de los tres nÃºmeros
-  return 0;
+ if (![a, b, c].every(n => typeof n === 'number')) {
+    throw new Error('Todos los parámetros deben ser números');
+  }
+  return Math.max(a, b, c);
 }
 
 /**
