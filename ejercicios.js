@@ -180,7 +180,13 @@ function sumaHastaN(n) {
  */
 function tablaMultiplicar(numero) {
   // TODO: Genera un array con la tabla de multiplicar
+  if (typeof numero !== 'number') {
+    throw new Error('El valor debe ser un número');
+  }
   const tabla = [];
+  for (let i = 1; i <= 10; i++) {
+    tabla.push(numero * i);
+  }
   return tabla;
 }
 
