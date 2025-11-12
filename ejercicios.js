@@ -88,8 +88,15 @@ function parOImpar(numero) {
  */
 function evaluarNota(nota) {
   // TODO: Implementa la lÃ³gica con if/else
-  return "";
-}
+  if (typeof nota !== 'number' || nota < 0 || nota > 100) {
+    throw new Error('Nota inválida: debe estar entre 0 y 100');
+  }
+  if (nota >= 60) {
+    return "Aprobado";
+  } else {
+    return "Reprobado";
+  }
+  }
 
 /**
  * Ejercicio 2.3: El mayor de tres nÃºmeros (4 puntos)
