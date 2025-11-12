@@ -264,7 +264,7 @@ function encontrarMaximo(numeros) {
 function filtrarMayores(numeros, limite) {
   // TODO: Crea un nuevo array con solo los nÃºmeros mayores al lÃ­mite
   const mayores = [];
-  return mayores;
+  return numeros.filter(num => num > limite);
 }
 
 /**
