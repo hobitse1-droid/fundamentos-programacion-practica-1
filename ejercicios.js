@@ -145,7 +145,14 @@ function clasificarEdad(edad) {
  */
 function factorial(n) {
   // TODO: Implementa usando un bucle for
-  return 1;
+    if (typeof n !== 'number' || n < 0 || !Number.isInteger(n)) {
+    throw new Error('El valor debe ser un número entero positivo');
+  }
+  let resultado = 1;
+  for (let i = 2; i <= n; i++) {
+    resultado *= i;
+  }
+  return resultado;
 }
 
 /**
